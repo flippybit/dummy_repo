@@ -1,0 +1,24 @@
+name: OpenSSF Scorecard (local test)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * 0' # Every Sunday at 01:00 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  scorecard:
+    name: Run OpenSSF Scorecard
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Scorecard (no badge, no upload)
+        uses: ossf/scorecard-action@v2.4.1
+        with:
+          results_file: results.json
+          results_format: json
