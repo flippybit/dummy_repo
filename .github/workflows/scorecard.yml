@@ -22,7 +22,7 @@ jobs:
         uses: ossf/scorecard-action@v2.4.1
         with:
           results_file: results.json
-          results_format: json
+          results_format: sarif
           publish_results: false
 
       - name: Upload SARIF file to GitHub Security tab
