@@ -6,7 +6,7 @@ on:
     - cron: '0 1 * * 0' # Every Sunday at 01:00 UTC
 
 permissions:
-  contents: read
+  contents: write
   security-events: write
 
 jobs:
