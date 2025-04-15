@@ -60,7 +60,7 @@ jobs:
           # Remove existing badge if present
           sed -i '/SCORECARD_BADGE.svg/d' README.md || true
           # Append new badge using raw.githubusercontent.co m path
-          echo -e '\n![Scorecard](https://raw.githubusercontent.com/${{ github.repository }}/main/SCORECARD_BADGE.svg)' >> README.md
+          echo -e '\n![Scorecard](https://raw.githubusercontent.com/flippybit/dummy_repo/main/SCORECARD_BADGE.svg)' >> README.md
           
   
       - name: Commit and Push Badge
