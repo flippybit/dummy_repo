@@ -68,6 +68,6 @@ jobs:
             git config --global user.email "devsecops@Bens3k.com"
             git config --global user.name "BENS3K GitHub Bot"
             git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-            git add SCORECARD_BADGE.svg
+            git add SCORECARD_BADGE.svg README.md
             git commit -m "Update local OpenSSF Scorecard badge"
             git push
