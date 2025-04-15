@@ -1,4 +1,4 @@
 # dummy_repo
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/flippybit/dummy_repo/badge)](https://security.scorecard.dev/viewer/?uri=github.com/flippybit/dummy_repo)
+![Scorecard](https://raw.githubusercontent.com/flippybit/dummy_repo/main/SCORECARD_BADGE.svg)
 
 dummy repo to test stuff
