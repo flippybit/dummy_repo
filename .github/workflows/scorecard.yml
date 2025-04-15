@@ -66,8 +66,8 @@ jobs:
   
       - name: Commit and Push Badge
         run: |
-            git config --global user.email "devsecops@caspar-health.com"
-            git config --global user.name "Caspar GitHub Bot"
+            git config --global user.email "devsecops@Bens3k.com"
+            git config --global user.name "BENS3K GitHub Bot"
             git add SCORECARD_BADGE.svg
             git commit -m "Update local OpenSSF Scorecard badge"
             git push
