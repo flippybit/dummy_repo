@@ -18,7 +18,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run Scorecard (no badge, no upload)
+      - name: Run Scorecard (SARIF format for security tab)
         uses: ossf/scorecard-action@v2.4.1
         with:
           results_file: results.sarif
@@ -29,3 +29,16 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: results.sarif
+
+      - name: Run Scorecard (SARIF format for security tab)
+        uses: ossf/scorecard-action@v2.4.1
+        with:
+          results_file: results.json
+          results_format: json
+          publish_results: false
+
+      - name: Upload Scorecard JSON results
+        uses: actions/upload-artifact@v4
+        with:
+          name: scorecard-results
+          path: results.json
