@@ -57,12 +57,11 @@ jobs:
 
       - name: Update README with badge
         run: |
-          BADGE_MD='![Scorecard](SCORECARD_BADGE.svg)'
-          if grep -q "SCORECARD_BADGE.svg" README.md; then
-            echo "Badge already present. Skipping append."
-          else
-            echo -e "\n$BADGE_MD" >> README.md
-          fi
+          # Remove existing badge if present
+          sed -i '/SCORECARD_BADGE.svg/d' README.md || true
+          # Append new badge using raw.githubusercontent.co m path
+          echo -e '\n![Scorecard](https://raw.githubusercontent.com/${{ github.repository }}/main/SCORECARD_BADGE.svg)' >> README.md
+          
   
       - name: Commit and Push Badge
         run: |
